@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: white;
+}
+
+.loading {
+  width: 7rem;
+  height: 7rem;
+  border: 5px solid grey;
+  border-radius: 50%;
+  border-top-color: green;
+  animation: loading 0.5s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main {
+  width: 90vw;
+  max-width: 1130px;
+  margin: 5rem auto;
+}
+
+.title {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.title-underline {
+  width: 10rem;
+  height: 4px;
+  background: orangered;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+}
+
+.tours {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.single-tour {
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 7px;
+  position: relative;
+}
+
+.single-tour:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 20rem;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: orangered;
+  color: white;
+  padding: 0.5rem;
+  border-top-right-radius: 7px;
+}
+
+.tour-info {
+  padding: 2rem;
+}
+
+.tour-info h4 {
+  text-align: center;
+  margin-bottom: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.tour-info p {
+  color: gray;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  background: transparent;
+  border: 1px solid orangered;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 4px;
+  border-radius: 5px;
+  transition: all 0.2s;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background: orangered;
+  color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  .tours {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .tours {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
