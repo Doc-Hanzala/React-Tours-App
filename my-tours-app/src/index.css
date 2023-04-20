@@ -120,9 +120,19 @@ img {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
+.info-btn {
+  color: orangered;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .tours {
     grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 }
 
